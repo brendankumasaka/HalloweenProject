@@ -33,18 +33,27 @@
             </objects>
             <point key="canvasLocation" x="1355" y="96"/>
         </scene>
-        <!--View Controller-->
+        <!--Third Detail View Controller-->
         <scene sceneID="APA-e2-fXm">
             <objects>
-                <viewController id="0Op-a2-eyS" sceneMemberID="viewController">
+                <viewController id="0Op-a2-eyS" customClass="thirdDetailViewController" customModule="HalloweenProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hWl-Fe-AzJ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClB-AZ-V7P">
+                                <rect key="frame" x="76" y="195" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Yuq-XI-zyi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Mn-l0-vVm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="ClB-AZ-V7P" id="Ax8-sS-wGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUX-Fe-kRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,6 +130,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="waw-Tq-88Q"/>
+                    <connections>
+                        <outlet property="candyImage" destination="ddk-cv-VfO" id="lcf-nD-vHg"/>
+                        <outlet property="candyLabel" destination="a3U-FJ-h5S" id="kEm-0z-yPr"/>
+                        <outlet property="candyText" destination="66y-50-aSN" id="a5V-pD-yAD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edw-cK-SSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,9 +152,9 @@
                     <connections>
                         <segue destination="6vp-1s-2MG" kind="relationship" relationship="viewControllers" id="HlI-lj-ejB"/>
                         <segue destination="AFe-r4-i9V" kind="relationship" relationship="viewControllers" id="aNU-ql-qvu"/>
-                        <segue destination="9gw-Mj-heb" kind="relationship" relationship="viewControllers" id="OIA-K1-Nvu"/>
-                        <segue destination="psN-WK-rhi" kind="relationship" relationship="viewControllers" id="g3a-Qi-IuT"/>
-                        <segue destination="w8O-b0-JZs" kind="relationship" relationship="viewControllers" id="KX5-ur-Bob"/>
+                        <segue destination="5ec-IK-TVL" kind="relationship" relationship="viewControllers" id="doF-pn-qrp"/>
+                        <segue destination="RN1-NC-Cnj" kind="relationship" relationship="viewControllers" id="KBV-Iu-d4U"/>
+                        <segue destination="w8O-b0-JZs" kind="relationship" relationship="viewControllers" id="L22-pv-FK1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlZ-iC-xlf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -150,7 +164,6 @@
         <!--Home-->
         <scene sceneID="wjW-km-ckJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccj-a2-IYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6vp-1s-2MG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="homekit" catalog="system" id="jCM-0d-ax3"/>
                     <toolbarItems/>
@@ -163,13 +176,14 @@
                         <segue destination="Wxv-CZ-NY8" kind="relationship" relationship="rootViewController" id="WGD-fC-19G"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccj-a2-IYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510.68702290076334" y="-579.57746478873241"/>
         </scene>
         <!--Chocolates-->
         <scene sceneID="BP7-eb-Ftb">
             <objects>
-                <tableViewController id="AFe-r4-i9V" sceneMemberID="viewController">
+                <tableViewController id="AFe-r4-i9V" customClass="ViewControlller" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="x6P-zg-2sy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,37 +208,20 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Chocolates" selectedImage="figure.archery" catalog="system" id="ida-oM-oXB"/>
                     <navigationItem key="navigationItem" id="yLe-Od-9HA"/>
+                    <connections>
+                        <outlet property="tableView" destination="x6P-zg-2sy" id="hnO-Dn-bFg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xp-af-VVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="511" y="96"/>
         </scene>
-        <!--Hard Candy-->
-        <scene sceneID="wlA-O2-8kf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9gw-Mj-heb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hard Candy" selectedImage="figure.hunting" catalog="system" id="XGx-er-yyf"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ftH-cM-7Qh">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0Op-a2-eyS" kind="relationship" relationship="rootViewController" id="Z9A-Zl-Ycs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g50-hQ-ayS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="510.68702290076334" y="779.57746478873241"/>
-        </scene>
-        <!--View Controller-->
+        <!--Fourth Detail View Controller-->
         <scene sceneID="JZH-Qh-zgv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ug1-1h-gUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="fBJ-fu-RSC" sceneMemberID="viewController">
+                <viewController id="fBJ-fu-RSC" customClass="fourthDetailViewController" customModule="HalloweenProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5to-Uv-DNb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fXh-EN-I1H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -232,13 +229,13 @@
                     <navigationItem key="navigationItem" id="sEO-ZY-DOm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ug1-1h-gUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1355" y="1439"/>
+            <point key="canvasLocation" x="1355" y="1458"/>
         </scene>
         <!--About Me-->
         <scene sceneID="90P-By-RkY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zdv-AH-wqq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="w8O-b0-JZs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zbW-cM-t2J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -278,36 +275,81 @@
                     <navigationItem key="navigationItem" id="hnL-bu-dE0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zdv-AH-wqq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="511" y="2151"/>
         </scene>
-        <!--Gummies-->
-        <scene sceneID="zg2-QF-9qd">
+        <!--Sour Cadies-->
+        <scene sceneID="xy6-55-loW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="snb-H3-1MJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="psN-WK-rhi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gummies" selectedImage="figure.play" catalog="system" id="ZCk-mb-qmr"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dx3-Fx-XLL">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <tableViewController id="5ec-IK-TVL" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="UOm-pS-kkg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cMi-At-LGd">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cMi-At-LGd" id="5KI-0q-8Ly">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5ec-IK-TVL" id="RvJ-dT-i2f"/>
+                            <outlet property="delegate" destination="5ec-IK-TVL" id="TQg-y0-VvR"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Sour Cadies" selectedImage="figure.wrestling" catalog="system" id="a4z-Gj-Kk8"/>
                     <connections>
-                        <segue destination="fBJ-fu-RSC" kind="relationship" relationship="rootViewController" id="Yri-hD-bUh"/>
+                        <segue destination="0Op-a2-eyS" kind="show" id="Lde-0E-Ojj"/>
                     </connections>
-                </navigationController>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9b3-CY-gzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510.68702290076334" y="1438.7323943661972"/>
+            <point key="canvasLocation" x="511" y="780"/>
+        </scene>
+        <!--Gummies-->
+        <scene sceneID="Cgj-zW-9Lc">
+            <objects>
+                <tableViewController id="RN1-NC-Cnj" customClass="third" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BhR-7q-8lJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mSI-nU-0LM">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mSI-nU-0LM" id="1MP-zx-7Ha">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RN1-NC-Cnj" id="jsC-sn-AS1"/>
+                            <outlet property="delegate" destination="RN1-NC-Cnj" id="ODg-5q-GEU"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Gummies" id="hsf-4g-0LR"/>
+                    <connections>
+                        <segue destination="fBJ-fu-RSC" kind="show" id="HAN-nF-mwM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bh2-DP-HJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="1458"/>
         </scene>
     </scenes>
     <resources>
         <image name="IMG_1760" width="2730" height="4096"/>
         <image name="crunch" width="426" height="185"/>
         <image name="figure.archery" catalog="system" width="118" height="128"/>
-        <image name="figure.hunting" catalog="system" width="128" height="110"/>
-        <image name="figure.play" catalog="system" width="128" height="117"/>
         <image name="figure.stand" catalog="system" width="74" height="128"/>
+        <image name="figure.wrestling" catalog="system" width="128" height="98"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

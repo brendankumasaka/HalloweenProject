@@ -1,13 +1,13 @@
 //
-//  secondDetailViewController.swift
+//  thirdDetailViewController.swift
 //  HalloweenProject
 //
-//  Created by Brendan Kumasaka on 11/2/23.
+//  Created by Brendan Kumasaka on 11/7/23.
 //
 
 import UIKit
 
-class secondDetailViewController: UIViewController {
+class thirdDetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -15,10 +15,11 @@ class secondDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if let imageName = imagePass {
             imageView.image = UIImage(named: imageName)
+            
+            
         }
-        
-        
     }
 }
