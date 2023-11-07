@@ -139,12 +139,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 tableView.deselectRow(at: indexPath, animated: true)
             }
             
-            //Part 9
             
             func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if segue.identifier == "mySegue"
                 {
-                    let s3 = segue.destination as! thirdDetailViewController
+                    let s3 = segue.destination as! fourthDetailViewController
                     let imageIndex = tableView.indexPathForSelectedRow?.row
                     s3.imagePass = categoryThreeImagesData[imageIndex!]
                 }
