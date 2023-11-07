@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var candyArray = ("Hershey", "Twix", "Crunch", "Reece's")
+    
+    var ratingArray = ["⭐️⭐️⭐️⭐️⭐️", "⭐️⭐️⭐️⭐️⭐️", "⭐️⭐️⭐️⭐️", "⭐️⭐️⭐️"]
+    
     var categoryOneImagesData = [String]()
     
     override func viewDidLoad()
@@ -30,7 +34,7 @@ class ViewController: UIViewController {
         if segue.identifier == "mySegue"
         {
             let s1 = segue.destination as! secondDetailViewController
-            /*let imageIndex = tableView.indexPathForSelectedRow?.row
+            let imageIndex = tableView.indexPathForSelectedRow?.row
              s1.imagePass = categoryOneImagesData[imageIndex!]
              }
              }
@@ -38,8 +42,4 @@ class ViewController: UIViewController {
              
              
              
-             
-             */
-        }
-    }
-}
+ 
