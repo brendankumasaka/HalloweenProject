@@ -234,6 +234,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="sEO-ZY-DOm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imagePass" destination="2rW-Bz-3DW" id="Ntf-US-qp9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ug1-1h-gUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
